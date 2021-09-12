@@ -38,6 +38,13 @@ def create_sub(request):
       payment_method_obj = stripe.PaymentMethod.retrieve(payment_method)
       djstripe.models.PaymentMethod.sync_from_stripe_data(payment_method_obj)
 
+### SEPA should go here ?
+# https://github.com/stripe-archive/web-elements-sepa-debit-payment/blob/master/server/python/server.py
+# https://github.com/dj-stripe/dj-stripe/tree/master/tests/apps/example
+# 
+
+
+
 
       try:
           # This creates a new Customer and attaches the PaymentMethod in one API call.
